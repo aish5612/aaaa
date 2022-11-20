@@ -1,0 +1,15 @@
+alter table salesman add mobile_no int(10);
+
+select name, commission from salesman;
+
+alter table salesman modify column commission float;
+
+create index inx on order_item(salesman_id);
+
+create view v as select name, city from salesman where city="Pune";
+
+select max(grade), city from customer group by city;
+
+alter table customer drop column grade;
+
+select max(purchase_amt) , customer_id from order_item group by customer_id;
