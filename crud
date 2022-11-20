@@ -1,5 +1,7 @@
 use school
 
+db.createCollection("Student")
+
 db.Student.insertMany([
 	{ name:'Murtaza', class:"T.E.", address:"Pune", age:20, fees:87000}, 
 	{ name:'Subrat', class:"T.E.", address:"Nainital", age:21, fees:99000}, 
