@@ -1,0 +1,35 @@
+alter table salesman add mobile_no int(10);
+
+select name, commission from salesman;
+
+alter table salesman modify column commission float;
+
+create index inx on order_item(salesman_id);
+show index from order_item;
+
+create view v as select name, city from salesman where city="Mumbai";
+select * from v;
+
+select max(grade), city from customer group by city;
+
+select max(purchase_amt) , customer_id from order_item group by customer_id;
+
+select distinct(salesman_id) from order_item;
+
+select name, city from salesman where city="Pune";
+
+select * from customer where grade=200;
+
+select order_no, order_date, purchase_amt from order_item where salesman_id = 101;
+
+ select * from customer where cname like '%n';
+
+update salesman set city = "Mumbai" where city = "Pune";
+
+select sum(purchase_amt) as total_purchase_amt from order_item;
+
+select order_no, order_date, max(purchase_amt) as max_price from order_item;
+
+select * from customer where city = "Pune" OR grade<=100;
+
+alter table customer drop column grade;
